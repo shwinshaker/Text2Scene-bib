@@ -37,11 +37,30 @@ A list of materials related to text2scene
 
 ### Image synthesis
 
+#### *GAN conditioned on text (Degrade on general images)*
+
+* [Generative Adversarial Text to Image Synthesis](GenerativeAdversarialTexttoImageSynthesis.pdf) (*ICML-2016*)
+  - **Target**: text -> photographic image (Bird & flower)
+  - **Method**: Both generator and discriminator conditioned on text feature
+  - **Dataset**: CUB dataset of bird images; Oxford-102 dataset of flower images
+  - **Code**: [Generative Adversarial Text-to-Image Synthesis](https://github.com/reedscot/icml2016)
+
+* [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](Zhang_StackGAN_Text_to_ICCV_2017_paper.pdf) (*ICCV-2017*)
+  - **Target**: text -> photographic image (Bird & flower)
+  - **Method**: two-stage GANs
+  - **Dataset**: CUB; Oxford-102; MS-COCO
+  - **Code**: [StackGAN](https://github.com/hanzhanggit/StackGAN)
+
+#### *Utilize pixel-wise semantic labels*
+* [Parallel multiscale autoregressive density estimation](ParallelMultiscaleAutoregressiveDensityEstimation.pdf) (*ICML-2017*)
+
+#### *Semantic layout as intermediate representation OR Retrieval from oject database*
+
 * [Semi-parametric Image Synthesis](Semi-parametricImageSynthesis.pdf) (*CVPR-2018*)
   - **Target**: Semantic layout -> Photographic image
   - **Method**:
     - Parametric + Non-parametric (segment retrieval)
-    - Segment database -> retrieve -> composite -> resolve occlusion -> post-process
+    - Segment database -> **retrieve** -> composite -> resolve occlusion -> post-process
   - **Dataset**: Cityscapes; NYU; ADE20K (See *Datasets* in this paper)
   - **Code**: [SIMS](https://github.com/xjqicuhk/SIMS)
   - **Demo**: [Semi-parametric Image Synthesis](https://github.com/xjqicuhk/SIMS)
@@ -51,15 +70,17 @@ A list of materials related to text2scene
   - **Method**:
     - groud-truth object positions -> scene graphs
     - Graph processing: *graph convolution network*
-    - symbolic graph -> scene layout: bounding box & segmentation task prediction
+    - symbolic graph -> scene layout: **bounding box & segmentation prediction**
     - scene layout -> image: *cascaded refinement network (CRN)*
     - image -> realistic image: adversarial training
   - **Dataset**:
     - [Visual Genome](https://visualgenome.org): Human annotated scene graphs provided
     - [COCO-Stuff](https://github.com/nightrome/cocostuff): COCO with pixel-level stuff annotations
 
-* [Inferring semantic layout for hierarchical text-to-image synthesis](Hong_Inferring_Semantic_Layout_CVPR_2018_paper.pdf) (*CVPR-2018*)
-  - **Target**: 
+* **[Inferring semantic layout for hierarchical text-to-image synthesis](Hong_Inferring_Semantic_Layout_CVPR_2018_paper.pdf)** (*CVPR-2018*)
+  - **Target**: text -> photographic image
+  - **Method**: text -> **semantic layout (box layout & shape)** -> image
+  - **Dataset**: COCO
 
 
 ### Image retrieval
