@@ -2,20 +2,20 @@
 A list of materials related to text2scene
 
 ### Rule-Based
-* [Learning Spatial Knowledge for Text to 3D Scene Generation](Text23DSence-LearningSpatialKnowledge.pdf) #thorough
+* [Learning Spatial Knowledge for Text to 3D Scene Generation](Text23DSence-LearningSpatialKnowledge.pdf) EMNLP 2014 #thorough
   - Text to 3D scene
-  - Mostly rule-based
-  - Private dataset
+  - **Method:** Mostly rule-based + Bayesian + NLP
+  - **Dataset:** Private
   - Learned spatial relation mapping
 
-* [Text to 3D Scene Generation with Rich Lexical Grounding](Textto3DSceneGenerationwithRichLexicalGrounding.pdf) #thorough
+* [Text to 3D Scene Generation with Rich Lexical Grounding](Textto3DSceneGenerationwithRichLexicalGrounding.pdf) ACL2015 #thorough
   - Text to 3D scene
   - Mostly rule-based
   - Collected dataset of scene-description pairs (Public)
   - Learned lexical grounding (object)
 
 * [Interactive Learning of Spatial Knowledge for Text to 3D Scene Generation
-](InteractiveLearningofSpatialKnowledgeforTextto3DSceneGeneration.pdf)
+](InteractiveLearningofSpatialKnowledgeforTextto3DSceneGeneration.pdf) ACL2014-Workshop
   - Text to 3D scene
   - Mostly rule-based
   - Interactive learning
