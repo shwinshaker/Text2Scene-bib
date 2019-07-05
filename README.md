@@ -1,41 +1,81 @@
 # Text2Scene-bib
 A list of materials related to text2scene
 
-### Rule-Based
+### 2D scene generation
 
-#### [Stanford NLP group](https://nlp.stanford.edu/projects/text2scene.shtml)
-* [Learning Spatial Knowledge for Text to 3D Scene Generation](Text23DSence-LearningSpatialKnowledge.pdf) (*EMNLP-2014*) #thorough
-  - **Style**: Text to 3D scene - room layout
-  - **Method**: Mostly rule-based + Bayesian + NLP
-  - **Dataset**: [Collected dataset of spatial relation descriptions](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
-  - **Code**:
-  - Learned spatial relation mapping
+* [Learning the Visual Interpretation of Sentences](LearningVisualInterpretationofSentences.pdf) (*ICCV-2013*)
+  - **Target**: text -> Cartoon-like
+  - **Method**: Statistical learning - Conditional Random Field (CRF)
+  - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/)
 
-* [Text to 3D Scene Generation with Rich Lexical Grounding](Textto3DSceneGenerationwithRichLexicalGrounding.pdf) (*ACL2015*) #thorough
-  - **Style**: Text to 3D scene - room layout
-  - **Method**: Mostly rule-based
-  - **Dataset**: [Collected dataset of scene-description pairs](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
-  - **Code**:
-  - Learned lexical grounding (object)
-
-* [Interactive Learning of Spatial Knowledge for Text to 3D Scene Generation
-](InteractiveLearningofSpatialKnowledgeforTextto3DSceneGeneration.pdf) (*ACL2014-Workshop*)
-  - Text to 3D scene - room layout
-  - Mostly rule-based
-  - Interactive learning
-
-### GAN
-
-### GAN-free
-* [Learning the Visual Interpretation of Sentences](LearningVisualInterpretationofSentences.pdf)
-  - Text to 2D scene
-  - Cartoon-like
-  - Statistical: Conditional Random Field (CRF)
-  - Public dataset: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/)
-
-* **[Text2Scene: Generating Compositional Scenes from Textual Descriptions](Text2Scene.pdf)** #thorough
-  - **Style**: Text to 2D scene; Cartoon-like & Sythesis
+* **[Text2Scene: Generating Compositional Scenes from Textual Descriptions](Text2Scene.pdf)** (*CVPR-2019*) #thorough
+  - **Target**: text -> Cartoon-like scenes & Object layouts & Synthetic scenes
   - **Method**: End2end deep learning (Recurrent CNN + attention); Unified framework
   - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/); COCO
   - **Code**: [Text2Scene](https://github.com/uvavision/Text2Scene)
-  
+ 
+ 
+### 3D scene generation
+
+#### [Stanford NLP group](https://nlp.stanford.edu/projects/text2scene.shtml)
+* [Learning Spatial Knowledge for Text to 3D Scene Generation](Text23DSence-LearningSpatialKnowledge.pdf) (*EMNLP-2014*) #thorough
+  - **Target**: Text -> 3D scene - room layout
+  - **Method**: Mostly rule-based + Bayesian + NLP
+  - **Dataset**: [Collected dataset of spatial relation descriptions](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
+  - Learned spatial relation mapping
+
+* [Interactive Learning of Spatial Knowledge for Text to 3D Scene Generation
+](InteractiveLearningofSpatialKnowledgeforTextto3DSceneGeneration.pdf) (*ACL-2014-Workshop*)
+  - **Target**: Text -> 3D scene - room layout
+  - **Method**: Interactive learning
+
+* [Text to 3D Scene Generation with Rich Lexical Grounding](Textto3DSceneGenerationwithRichLexicalGrounding.pdf) (*ACL-2015*) #thorough
+  - **Target**: Text -> 3D scene - room layout
+  - **Method**: Mostly rule-based + Supervised learning -> learning lexical grounding (i.e. object match)
+  - **Dataset**: [Collected dataset of scene-description pairs](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
+
+
+### Image synthesis
+
+* [Semi-parametric Image Synthesis](Semi-parametricImageSynthesis.pdf) (*CVPR-2018*)
+  - **Target**: Semantic layout -> Photographic image
+  - **Method**:
+    - Parametric + Non-parametric (segment retrieval)
+    - Segment database -> retrieve -> composite -> resolve occlusion -> post-process
+  - **Dataset**: Cityscapes; NYU; ADE20K (See *Datasets* in this paper)
+  - **Code**: [SIMS](https://github.com/xjqicuhk/SIMS)
+  - **Demo**: [Semi-parametric Image Synthesis](https://github.com/xjqicuhk/SIMS)
+
+* [Image Generation from Scene Graphs](ImageGenerationfromSceneGraphs.pdf) (*CVPR-2018*)
+  - **Target**: Scene graphs -> Photographic images
+  - **Method**:
+    - groud-truth object positions -> scene graphs
+    - Graph processing: *graph convolution network*
+    - symbolic graph -> scene layout: bounding box & segmentation task prediction
+    - scene layout -> image: *cascaded refinement network (CRN)*
+    - image -> realistic image: adversarial training
+  - **Dataset**:
+    - [Visual Genome](https://visualgenome.org): Human annotated scene graphs provided
+    - [COCO-Stuff](https://github.com/nightrome/cocostuff): COCO with pixel-level stuff annotations
+
+* [Inferring semantic layout for hierarchical text-to-image synthesis](Hong_Inferring_Semantic_Layout_CVPR_2018_paper.pdf) (*CVPR-2018*)
+  - **Target**: 
+
+
+### Image retrieval
+
+* [Image Retrieval Using Scene Graphs](ImageRetrievalusingSceneGraphs.pdf) (*CVPR-2015*)
+  - **Target**: Textual query -> Semantically related image
+  - **Method**: Scene graph; Conditional random field
+  - **Dataset**: real-world scene graphs: manually labeled YFCC100m & COCO images
+
+### Video scene generation
+* [Imagine This! Scripts to Compositions to Videos](ImageThis_ScriptstoVideos.pdf) (*ECCV-2018*)
+  - **Target**: text -> scene video
+  - **Method**: Entity & Background retrieval + Layout composer
+  - **Dataset**: FLINTSTONES: richly-annotated video-caption dataset
+  - **Demo**: [CRAFT](https://youtu.be/688Vv86n0z8)
+
+
+
+
