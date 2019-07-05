@@ -1,7 +1,7 @@
 # Text2Scene-bib
 A list of materials related to text2scene
 
-### 2D scene generation
+## 2D scene generation
 
 * [Learning the Visual Interpretation of Sentences](LearningVisualInterpretationofSentences.pdf) (*ICCV-2013*)
   - **Target**: text -> Cartoon-like
@@ -13,9 +13,23 @@ A list of materials related to text2scene
   - **Method**: End2end deep learning (Recurrent CNN + attention); Unified framework
   - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/); COCO
   - **Code**: [Text2Scene](https://github.com/uvavision/Text2Scene)
+
+#### *Learn commonsense spatiotemporal knowledge*
+
+* [Predicting Object Dynamics in Scenes](PredictingObjectDynamicsinScenes.pdf) (*CVPR-2014*)
+  - **Target**: scene -> next scene
+  - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/)
  
- 
-### 3D scene generation
+* [Visual Abstraction for Zero-Shot Learning](Zero-ShotlearningviaVisualAbstraction.pdf) (*ECCV-2014*)
+  - **Target**: learn concepts involving individual poses and interations between two people
+  - **Dataset**: Collected: two people interating via different verb phrases
+
+* [Learning common sense through visual abstraction](LearningCommonSensethroughVisualAbstraction.pdf) (*ICCV-2015*)
+  - **Target**: assess the plausibility of the interation in a scene
+  - **Dataset**: Collected: indoor scenes
+
+
+## 3D scene generation
 
 #### [Stanford NLP group](https://nlp.stanford.edu/projects/text2scene.shtml)
 * [Learning Spatial Knowledge for Text to 3D Scene Generation](Text23DSence-LearningSpatialKnowledge.pdf) (*EMNLP-2014*) #thorough
@@ -35,7 +49,7 @@ A list of materials related to text2scene
   - **Dataset**: [Collected dataset of scene-description pairs](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
 
 
-### Image synthesis
+## Image synthesis
 
 #### *GAN conditioned on text (Degrade on general images)*
 
@@ -83,14 +97,14 @@ A list of materials related to text2scene
   - **Dataset**: COCO
 
 
-### Image retrieval
+## Image retrieval
 
 * [Image Retrieval Using Scene Graphs](ImageRetrievalusingSceneGraphs.pdf) (*CVPR-2015*)
   - **Target**: Textual query -> Semantically related image
   - **Method**: Scene graph; Conditional random field
   - **Dataset**: real-world scene graphs: manually labeled YFCC100m & COCO images
 
-### Video scene generation
+## Video scene generation
 * [Imagine This! Scripts to Compositions to Videos](ImageThis_ScriptstoVideos.pdf) (*ECCV-2018*)
   - **Target**: text -> scene video
   - **Method**: Entity & Background retrieval + Layout composer
