@@ -1,6 +1,9 @@
 # Text2Scene-bib
 A list of materials related to text2scene
 
+## Dataset investigation
+* Abstract Scene Dataset (*[CVPR-2013](AbstractScene/AbstactSceneDataset.pdf) & [PAMI-2015](AbstractScene/AbstactSceneDataset-new.pdf)*) #thorough
+
 ## Abstract scene generation
 
 * **[Learning the Visual Interpretation of Sentences](AbstractScene/LearningVisualInterpretationofSentences.pdf)** (*ICCV-2013*)
@@ -21,12 +24,12 @@ A list of materials related to text2scene
   - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/)
  
 * [Visual Abstraction for Zero-Shot Learning](AbstractScene/Zero-ShotlearningviaVisualAbstraction.pdf) (*ECCV-2014*)
-  - **Target**: learn concepts involving individual poses and interations between two people
+  - **Target**: learn concepts involving individual poses and interactions between two people
   - **Dataset**: Abstract scenes depicting fine-grained iteractions between two people
   - [Webpage](https://computing.ece.vt.edu/~santol/projects/zsl_via_visual_abstraction/index.html)
 
 * [Learning common sense through visual abstraction](AbstractScene/LearningCommonSensethroughVisualAbstraction.pdf) (*ICCV-2015*)
-  - **Target**: Assess the plausibility of the interation in a scene
+  - **Target**: Assess the plausibility of the interaction in a scene
   - **Dataset**: [Second Generation Abstract Scene Dataset](https://vision.ece.vt.edu/cs/#code_data)
   - [Webpage](https://vision.ece.vt.edu/cs)
 
