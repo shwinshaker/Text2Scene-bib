@@ -22,11 +22,13 @@ A list of materials related to text2scene
  
 * [Visual Abstraction for Zero-Shot Learning](Zero-ShotlearningviaVisualAbstraction.pdf) (*ECCV-2014*)
   - **Target**: learn concepts involving individual poses and interations between two people
-  - **Dataset**: Collected: two people interating via different verb phrases
+  - **Dataset**: Abstract scenes depicting fine-grained iteractions between two people
+  - [Webpage](https://computing.ece.vt.edu/~santol/projects/zsl_via_visual_abstraction/index.html)
 
 * [Learning common sense through visual abstraction](LearningCommonSensethroughVisualAbstraction.pdf) (*ICCV-2015*)
-  - **Target**: assess the plausibility of the interation in a scene
-  - **Dataset**: Collected: indoor scenes
+  - **Target**: Assess the plausibility of the interation in a scene
+  - **Dataset**: [Second Generation Abstract Scene Dataset](https://vision.ece.vt.edu/cs/#code_data)
+  - [Webpage](https://vision.ece.vt.edu/cs)
 
 
 ## 3D scene generation
@@ -91,7 +93,7 @@ A list of materials related to text2scene
     - [Visual Genome](https://visualgenome.org): Human annotated scene graphs provided
     - [COCO-Stuff](https://github.com/nightrome/cocostuff): COCO with pixel-level stuff annotations
 
-* **[Inferring semantic layout for hierarchical text-to-image synthesis](Hong_Inferring_Semantic_Layout_CVPR_2018_paper.pdf)** (*CVPR-2018*)
+* **[Inferring semantic layout for hierarchical text-to-image synthesis](InferringSemanticLayoutforHierarchicalText-to-ImageSynthesis.pdf)** (*CVPR-2018*)
   - **Target**: text -> photographic image
   - **Method**: text -> **semantic layout (box layout & shape)** -> image
   - **Dataset**: COCO
