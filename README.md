@@ -10,6 +10,7 @@ A list of materials related to text2scene
   - **Target**: text -> Cartoon-like
   - **Method**: Statistical learning - Conditional Random Field (CRF)
   - **Dataset**: [Abstract Scene Dataset](https://vision.ece.vt.edu/clipart/)
+  - [Supplementary Material](LearningVisualInterpretationofSentences-SupplementaryMaterial.pdf)
 
 * **[Text2Scene: Generating Compositional Scenes from Textual Descriptions](AbstractScene/Text2Scene.pdf)** (*CVPR-2019*) #thorough
   - **Target**: text -> Cartoon-like scenes & Object layouts & Synthetic scenes
@@ -53,8 +54,14 @@ A list of materials related to text2scene
   - **Method**: Mostly rule-based + Supervised learning -> learning lexical grounding (i.e. object match)
   - **Dataset**: [Collected dataset of scene-description pairs](http://downloads.cs.stanford.edu/nlp/data/text2scene.shtml#lexground-acl2015)
 
+## 3D shape generation
+* [Text2Shape: Generating Shapes from Natural Language by Learning Joint Embeddings](http://text2shape.stanford.edu) (*CVPR-2018*)
+  - **Target**: text -> colored 3D shapes of tables and chairs
+  - **Method**: Joint metric learning to capture many-to-many relations between text and properties of 3D shapes
+  - **Dataset**: [ShapeNet](https://www.shapenet.org) and manually collected text descriptions
+  - **Code**: [text2shape](https://github.com/kchen92/text2shape/)
 
-## Image synthesis
+## Photorealistic image synthesis
 
 #### *GAN conditioned on text (Degrade on general images)*
 
@@ -104,18 +111,41 @@ A list of materials related to text2scene
 
 ## Image query
 
+* [Image Ranking and Retrieval based on Multi-Attribute Queries](ImageRankingandRetrievalbasedonMulti-AttributeQueries.pdf) (*CVPR-2011*)
+
 * [Image Retrieval Using Scene Graphs](ImageQuery/ImageRetrievalusingSceneGraphs.pdf) (*CVPR-2015*)
   - **Target**: Textual query -> Semantically related image
   - **Method**: Scene graph; Conditional random field
   - **Dataset**: real-world scene graphs: manually labeled YFCC100m & COCO images
 
-## Video scene generation
-* [Imagine This! Scripts to Compositions to Videos](Video/ImageThis_ScriptstoVideos.pdf) (*ECCV-2018*)
+## Video generation
+* [Imagine This! Scripts to Compositions to Videos](VideoGeneration/ImageThis_ScriptstoVideos.pdf) (*ECCV-2018*)
   - **Target**: text -> scene video
   - **Method**: Entity & Background retrieval + Layout composer
   - **Dataset**: FLINTSTONES: richly-annotated video-caption dataset
   - **Demo**: [CRAFT](https://youtu.be/688Vv86n0z8)
 
+* [Generating Animated Videos of Human Activities from Natural Language Descriptions](VideoGeneration/GeneratingAnimatedVideosofHumanActivitiesfromNaturalLanguageDescriptions.pdf) (*NIPS-2018*)
+  - **Target**: text -> a sequence of 3D human skeletal poses
+  - **Method**:
+    - **Autoencoder**: Learn a representation of human motions without text
+    - Seq2seq: map text into motion representation
+  - **Dataset**: [The KIT Motion-Language Dataset](https://motion-annotation.humanoids.kit.edu/dataset/)
+
+* [Language2Pose: Natural Language Grounded Pose Forecasting](https://arxiv.org/abs/1907.01108) (*2019*)
+  - **Target**: text -> pose animation
+  - **Method**: learn a joint embedding of text and pose using curriculum learning
+  - **Dataset**: [The KIT Motion-Language Dataset](https://motion-annotation.humanoids.kit.edu/dataset/)
+
+## Visual story telling
+* [A Pipeline for Creative Visual Storytelling](VisualStoryTelling/APipelineforCreativeVisualStorytelling.pdf) (*2018*)
+  - **Target**: video -> a sequence of text (Pipeline proposed)
+
+* [Video Storytelling](VisualStoryTelling/VideoStorytelling.pdf) (*2018*)
+  - **Target**: video -> a sequence of coherent and succinct text
+  - **Method**:
+    - Contextual multimodal embedding: Residual Bidirectional RNN
+    - Narrator: Reinforcement learning
 
 
 
