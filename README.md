@@ -119,11 +119,40 @@ A list of materials related to text2scene
   - **Dataset**: real-world scene graphs: manually labeled YFCC100m & COCO images
 
 ## Video generation
+
+* [Generating Videos with Scene Dynamics](http://www.cs.columbia.edu/~vondrick/tinyvideo/) (*NIPS-2016*)
+  - **Target**: video generation (unlabeled)
+  - **Method**: **Scene decomposition model**: Foreground + Background + Mask (GAN\*3)
+  - **Dataset**: A large amount of unlabeled video downloaded from Flickr
+  - **Code**: [videoGAN](https://github.com/cvondrick/videogan)
+
+* [Visual Dynamics: Stochastic Future Generation via Layered Cross Convolutional Networks](http://visualdynamics.csail.mit.edu) (*NIPS-2016*)
+  - **Target**: frame -> next frame
+  - **Method**: Probabilistic
+
+* [To Create What You Tell: Generating Videos from Captions](ToCreateWhatYouTell.pdf) (*ACM-2017*)
+  - **Target**: caption -> video
+  - **Method**: Conditional GAN: LSTM caption encoder + Convolutional generator + 3 discriminator conditioned on the caption
+  - **Dataset**:
+    - Synthesized videos of handwritten digits bouncing
+    - Video snippets from YouTube about cooking
+
 * [Imagine This! Scripts to Compositions to Videos](VideoGeneration/ImageThis_ScriptstoVideos.pdf) (*ECCV-2018*)
   - **Target**: text -> scene video
   - **Method**: Entity & Background retrieval + Layout composer
   - **Dataset**: FLINTSTONES: richly-annotated video-caption dataset
   - **Demo**: [CRAFT](https://youtu.be/688Vv86n0z8)
+
+* [Video Generation from Text](VideoGenerationfromText.pdf) (*AAAI-2018*)
+  - **Target**: text -> video
+  - **Method**: text -> gist -> video (VAE + GAN)
+  - **Dataset**: Videos crawled from YouTube along with titles and descriptions
+
+* [MoCoGAN: Decomposing Motion and Content for Video Generation](CVPR2018_MoCoGAN.pdf) (*CVPR-2018*)
+  - **Target**: video generation
+  - **Method**: Content + motion GAM
+
+* TFGAN: IMPROVING CONDITIONING FOR TEXT-TO-VIDEO SYNTHESIS (*2018*) *#Withdrawn*
 
 * [Generating Animated Videos of Human Activities from Natural Language Descriptions](VideoGeneration/GeneratingAnimatedVideosofHumanActivitiesfromNaturalLanguageDescriptions.pdf) (*NIPS-2018*)
   - **Target**: text -> a sequence of 3D human skeletal poses
